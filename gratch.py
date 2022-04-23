@@ -7,21 +7,7 @@ from primaryschool.settings import *
 
 requirements = [
     # ('requirement_name','version','project_url','License','license_url')
-    [
-        (  # dev
-            "isort",
-            "",
-            "https://github.com/pycqa/isort",
-            "MIT",
-            "https://github.com/PyCQA/isort/blob/main/LICENSE",
-        ),
-        (
-            "autopep8",
-            "",
-            "https://github.com/hhatto/autopep8",
-            "MIT",
-            "https://github.com/hhatto/autopep8/blob/master/LICENSE",
-        ),
+    [   # dev
         (
             "nose2",
             "",
@@ -83,15 +69,11 @@ for arg in argv:
         install_requirements_dev_u()
 
     if arg == "test":
-        from tests import victory
-
-        sys.argv[0] = re.sub(r"(-script\.pyw|\.exe)?$", "", sys.argv[0])
-        sys.exit(victory())
         break
 
 if len(argv) == 0:
 
-    from primaryschool import victory
+    from gratch import spend
 
     sys.argv[0] = re.sub(r"(-script\.pyw|\.exe)?$", "", sys.argv[0])
-    sys.exit(victory())
+    sys.exit(spend())

@@ -4,8 +4,7 @@ import os
 project_path = os.path.abspath(os.path.dirname(__file__))
 
 
-def victory():
-    from primaryschool import ready
-
+def spend():
+    from gratch import ready
     ready.go()
     pass
