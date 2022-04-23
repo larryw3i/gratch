@@ -53,7 +53,7 @@ coverage.xml
 
 # Translations
 *.mo
-*.pot
+*.po~
 
 # Django stuff:
 *.log
@@ -127,3 +127,20 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# .idea
+.idea/
+
+# primaryschool/data/snapshots
+primaryschool/data/snapshots/
+
+# *~
+*~
+
+# vim
+*.swp
+*.swo
+
+
+
+
