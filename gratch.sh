@@ -3,6 +3,7 @@
 _args=("$@") # All parameters from terminal.
 
 app_name='gratch'
+bin_dir='venv/local/bin'
 
 update_gitignore(){
     git rm -r --cached . && git add .
@@ -48,42 +49,41 @@ git_add(){
 }
 
 _pip3(){
-    python3 ${app_name}.py req_dev_u
+    ${bin_dir}/python3 ${app_name}.py req_dev_u
 }
 
 twine_upload(){
-    twine upload dist/*
+    ${bin_dir}/twine upload dist/*
 }
 
 bdist(){
     _msgfmt
     rm -rf dist/ build/ ${app_name}.egg-info/
-    python3 setup.py sdist bdist_wheel
+    ${bin_dir}/python3 setup.py sdist bdist_wheel
 }
 
 bdist_deb(){
     rm -rf deb_dist/  dist/  ${app_name}.egg-info/ ${app_name}*.tar.gz
-    python3 setup.py --command-packages=stdeb.command bdist_deb
+    ${bin_dir}/python3 setup.py --command-packages=stdeb.command bdist_deb
 }
 
 _i_test(){
     bdist
-    pip3 uninstall ${app_name} -y
-    pip3 install dist/*.whl
+    ${bin_dir}/pip3 uninstall ${app_name} -y
+    ${bin_dir}/pip3 install dist/*.whl
     ${app_name}
 }
 
-
 _start(){
     [[ -f "${app_name}/locale/en_US/LC_MESSAGES/${app_name}.mo" ]] || _msgfmt
-    python3 ${app_name}.py
+    ${bin_dir}/python3 ${app_name}.py
 }
 
 active_venv(){
-    [[ -f "./venv/bin/activate" ]] || \
+    [[ -f "${bin_dir}/activate" ]] || \
     [[ -f $(which virtualenv) ]] && virtualenv venv || \
     echo "Installing virtualenv..." && pip3 install -U virtualenv
-    source venv/bin/activate
+    source ${bin_dir}/activate
 }
 
 cat_bt(){
@@ -98,7 +98,7 @@ cat_bt(){
 }
 
 test(){
-    python3 ${app_name}.py test
+    ${bin_dir}/python3 ${app_name}.py test
 }
 
 tu(){       twine_upload;       }

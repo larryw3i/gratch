@@ -21,21 +21,6 @@ requirements = [
     # product
     [  # ('requirement_name','version','project_url','License','license_url')
         (
-            "pycairo",
-            "",
-            "https://github.com/pygobject/pycairo",
-            "GNU Lesser General Public License v2 (LGPLv2), "+\
-            "Mozilla Public License 1.1 (MPL 1.1) (LGPL-2.1-only OR MPL-1.1)",
-            "https://github.com/pygobject/pycairo/blob/master/COPYING",
-        ),
-        (
-            "PyGObject",
-            "",
-            "https://gitlab.gnome.org/GNOME/pygobject",
-            "GNU Lesser General Public License v2 or later (LGPLv2+) (GNU LGPL)",
-            "https://gitlab.gnome.org/GNOME/pygobject/-/blob/master/COPYING",
-        ),
-        (
             "appdirs",
             "",
             "https://github.com/ActiveState/appdirs",

@@ -7,8 +7,10 @@ import webbrowser
 from functools import partial
 from itertools import zip_longest
 
+from gratch.locale import _
+from gratch.widgets.mainwindow import MainWindow
 
 
 def go():
-    print('Hello!')
+    MainWindow().mainloop()
     pass

@@ -7,7 +7,7 @@ from primaryschool.settings import *
 
 requirements = [
     # ('requirement_name','version','project_url','License','license_url')
-    [   # dev
+    [  # dev
         (
             "nose2",
             "",
