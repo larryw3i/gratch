@@ -26,4 +26,6 @@ class WidgetArea(AreaBase):
         super().__init__(win, width)
 
     def place(self):
-        self.separator.place(x=self.win.get_w_width(of=3), y=0, relwidth=0.2, relheight=1)
+        self.separator.place(
+            x=self.win.get_w_width(of=3), y=0, relwidth=0.2, relheight=1
+        )
