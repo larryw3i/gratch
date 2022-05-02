@@ -4,6 +4,8 @@ _args=("$@") # All parameters from terminal.
 
 app_name='gratch'
 bin_dir='venv/local/bin'
+locale_dir="${app_name}/locale"
+pot_path="${locale_dir}/gratch.pot"
 
 update_gitignore(){
     git rm -r --cached . && git add .
@@ -13,16 +15,17 @@ update_gitignore(){
 }
 
 _xgettext(){
-    xgettext -v -j -L Python --output=${app_name}/locale/${app_name}.pot \
+    [[ -f ${pot_path} ]] || touch ${pot_path}
+    xgettext -v -j -L Python --output=${pot_path} \
     $(find ${app_name}/ -name "*.py")
 
-    for _po in $(find ${app_name}/locale/ -name "*.po"); do
-        msgmerge -U -v $_po ${app_name}/locale/${app_name}.pot
+    for _po in $(find ${locale_dir}/ -name "*.po"); do
+        msgmerge -U -v $_po ${pot_path}
     done
 }
 
 _msgfmt(){
-    for _po in $(find ${app_name}/locale -name "*.po"); do
+    for _po in $(find ${locale_dir} -name "*.po"); do
         echo -e "$_po --> ${_po/.po/.mo}"
         msgfmt -v -o ${_po/.po/.mo} $_po
     done
@@ -78,7 +81,7 @@ _i_test(){
 }
 
 _start(){
-    [[ -f "${app_name}/locale/en_US/LC_MESSAGES/${app_name}.mo" ]] || _msgfmt
+    [[ -f "${locale_dir}/en_US/LC_MESSAGES/${app_name}.mo" ]] || _msgfmt
     ${bin_dir}/python3 ${app_name}.py
 }
 

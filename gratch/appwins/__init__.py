@@ -9,15 +9,8 @@ from itertools import zip_longest
 
 import gi
 
-from gratch.appwins.gratchwindow import GratchWindow
 from gratch.locale import _
+from gratch.widgets.mainwindow import MainWindow
 
 gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk
-
-
-def go(test=True):
-    if test:
-        print(_("Hello, World!"))
-    gratchwin = GratchWindow()
-    gratchwin.run()

@@ -3,6 +3,8 @@ import locale
 import os
 import sys
 
+from gratch.settings import app_name
+
 sys_lang_code = locale.getdefaultlocale()[0]
 locale_path = locale_dir_path = os.path.abspath(os.path.dirname(__file__))
 locale_langcodes = [
@@ -15,7 +17,7 @@ if sys_lang_code not in locale_langcodes:
     sys_lang_code = "en_US"
 
 lang = gettext.translation(
-    "primaryschool", localedir=locale_path, languages=[sys_lang_code]
+    app_name, localedir=locale_path, languages=[sys_lang_code]
 )
 
 lang.install()
