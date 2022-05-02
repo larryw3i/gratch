@@ -11,6 +11,7 @@ from gratch.locale import _
 from gratch.widgets.mainwindow import MainWindow
 
 
-def go():
-    MainWindow().mainloop()
+def go(test=True):
+    if test:
+        print(_('Hello, World!'))
     pass
