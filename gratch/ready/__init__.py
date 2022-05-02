@@ -13,5 +13,5 @@ from gratch.widgets.mainwindow import MainWindow
 
 def go(test=True):
     if test:
-        print(_('Hello, World!'))
+        print(_("Hello, World!"))
     pass

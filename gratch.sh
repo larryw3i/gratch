@@ -38,6 +38,9 @@ p8(){
 }
 
 _black(){
+    isort ${app_name}/
+    isort ${app_name}.py
+    isort ./setup.py
     python3 -m black -l 79 ${app_name}/;
     python3 -m black -l 79 ${app_name}.py;
     python3 -m black -l 79 setup.py;

@@ -27,6 +27,14 @@ requirements = [
             "MIT",
             "https://github.com/ActiveState/appdirs/blob/master/LICENSE.txt",
         ),
+        (
+            "PyGObject",
+            "",
+            "https://gitlab.gnome.org/GNOME/pygobject",
+            "GNU Lesser General Public License v2 or later (LGPLv2+)"
+            + " (GNU LGPL)",
+            "https://gitlab.gnome.org/GNOME/pygobject/-/blob/master/COPYING",
+        ),
     ],
 ]
 

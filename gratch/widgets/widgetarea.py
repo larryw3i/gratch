@@ -3,21 +3,14 @@ import os
 import pickle
 import subprocess
 import threading
+import tkinter as tk
 import webbrowser
 from functools import partial
 from itertools import zip_longest
-import importlib
-import os
-import pickle
-import subprocess
-import threading
-import webbrowser
-from functools import partial
-from itertools import zip_longest
-from gratch.locale import _
 from tkinter import *
 from tkinter import ttk
-import tkinter as tk
+
+from gratch.locale import _
 from gratch.widgets.areabase import AreaBase
 
 
