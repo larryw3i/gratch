@@ -134,8 +134,9 @@ dmypy.json
 # primaryschool/data/snapshots
 primaryschool/data/snapshots/
 
-# *~
+# *~  *#
 *~
+*#
 
 # vim
 *.swp

@@ -9,6 +9,7 @@ app_maintainer = app_author
 app_maintainer_email = app_author_email
 app_description = ""
 app_url = "https://github.com/larryw3i/gratch"
+gi_require_version = ("Gtk", "4.0")
 app_contributors = [
     app_author,
     "",

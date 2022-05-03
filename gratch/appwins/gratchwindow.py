@@ -6,17 +6,18 @@ import threading
 import webbrowser
 from functools import partial
 from itertools import zip_longest
+from tkinter import *
 
 import gi
 
 from gratch.locale import _
+from gratch.settings import gi_require_version
 from gratch.widgets.mainwindow import MainWindow
 
-gi.require_version("Gtk", "4.0")
+gi.require_version(*gi_require_version)
 from gi.repository import Gtk
-from tkinter import *
 
-root= Tk()
+root = Tk()
 
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -24,7 +25,7 @@ screen_height = root.winfo_screenheight()
 
 class GratchWindow:
     def __init__(
-        self, appid=None, test=True, default_width=None, default_height=None
+        self, appid=None, test=False, default_width=None, default_height=None
     ):
         self.appid = appid or "fun.larryw3i.gratch"
         self.app = Gtk.Application(application_id=self.appid)
@@ -32,16 +33,20 @@ class GratchWindow:
         self._test = test
         self.screen_width = screen_width
         self.screen_height = screen_height
-        self.default_width = default_width or 500
-        self.default_height = default_height or 200
+        self.default_width = default_width or self.get_screen_width_of(2)
+        self.default_height = default_height or self.get_screen_height_of(2)
+
+    def get_screen_width_of(self, of):
+        return int(self.screen_width / of)
+
+    def get_screen_height_of(self, of):
+        return int(self.screen_height / of)
 
     def test(self):
         print(_("test!"))
 
     def set_childs(self):
-        self.btn = Gtk.Button(label=_("Hello, World!"))
-        self.btn.connect("clicked", lambda x: self.win.close())
-        self.win.set_child(self.btn)
+        pass
 
     def on_activate(self, app):
         self.win = Gtk.ApplicationWindow(
