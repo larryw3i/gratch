@@ -22,8 +22,9 @@
 
 G_BEGIN_DECLS
 
-#define GRATCH_TYPE_WINDOW (gratch_window_get_type())
+#define GRATCH_TYPE_WINDOW (gratch_window_get_type ())
 
-G_DECLARE_FINAL_TYPE (GratchWindow, gratch_window, GRATCH, WINDOW, GtkApplicationWindow)
+G_DECLARE_FINAL_TYPE (GratchWindow, gratch_window, GRATCH, WINDOW,
+                      GtkApplicationWindow)
 
 G_END_DECLS

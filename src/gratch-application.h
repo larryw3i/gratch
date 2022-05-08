@@ -22,11 +22,12 @@
 
 G_BEGIN_DECLS
 
-#define GRATCH_TYPE_APPLICATION (gratch_application_get_type())
+#define GRATCH_TYPE_APPLICATION (gratch_application_get_type ())
 
-G_DECLARE_FINAL_TYPE (GratchApplication, gratch_application, GRATCH, APPLICATION, AdwApplication)
+G_DECLARE_FINAL_TYPE (GratchApplication, gratch_application, GRATCH,
+                      APPLICATION, AdwApplication)
 
 GratchApplication *gratch_application_new (gchar *application_id,
-                                           GApplicationFlags  flags);
+                                           GApplicationFlags flags);
 
 G_END_DECLS
