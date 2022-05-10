@@ -4,4 +4,4 @@ data/fun.larryw3i.gratch.gschema.xml
 src/gratch-window.ui
 src/main.c
 src/gratch-window.c
-
+src/gtk/help-overlay.ui

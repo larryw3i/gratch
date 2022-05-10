@@ -142,6 +142,8 @@ primaryschool/data/snapshots/
 *.swp
 *.swo
 
+#.gmo
+*.gmo
 
 
 

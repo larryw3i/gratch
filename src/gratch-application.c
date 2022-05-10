@@ -19,6 +19,8 @@
 #include "gratch-application.h"
 #include "gratch-window.h"
 
+#include <glib/gi18n.h>
+
 struct _GratchApplication
 {
   GtkApplication parent_instance;
