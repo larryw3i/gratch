@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/fun/larrywei/gratch">
+  <gresource prefix="/fun/larryw3i/gratch">
     <file>gratch-window.ui</file>
     <file>gtk/help-overlay.ui</file>
   </gresource>

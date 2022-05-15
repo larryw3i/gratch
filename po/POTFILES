@@ -1,8 +1,7 @@
-data/fun.larrywei.gratch.desktop.in
-data/fun.larrywei.gratch.appdata.xml.in
-data/fun.larrywei.gratch.gschema.xml
+data/fun.larryw3i.gratch.desktop.in
+data/fun.larryw3i.gratch.appdata.xml.in
+data/fun.larryw3i.gratch.gschema.xml
 src/gratch-window.ui
 src/main.c
 src/gratch-window.c
-src/gratch-application.c
 
