@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=gratch
+Exec=gratch
+Icon=fun.larrywei.gratch
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
